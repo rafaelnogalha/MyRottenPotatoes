@@ -2,10 +2,12 @@ require 'active_record'
 
 class Movie < ActiveRecord::Base
   #self.abstract_class = true
-  #attr_accessible :title, :rating, :description, :release_date
+  #attr_accessor :title, :rating, :description, :release_date
+  attr_accessor :rating
   def self.all_ratings
      %w(G PG PG-13 NC-17 R)
   end
+
 end
 # starwars = Movie.create!(:title => 'Star Wars',
 # 	  :release_date => '25/4/1977', :rating => 'PG')
