@@ -3,9 +3,10 @@ require 'active_record'
 class Movie < ActiveRecord::Base
   #self.abstract_class = true
   #attr_accessor :title, :rating, :description, :release_date
-  attr_accessor :rating
+  #@all_ratings = ['G', 'PG', 'PG-13', 'R' ,'NC-17']
   def self.all_ratings
-     %w(G PG PG-13 NC-17 R)
+    # @all_ratings = ['G', 'PG', 'PG-13', 'R' ,'NC-17']
+    ['G', 'PG', 'PG-13', 'NC-17' ,'R']
   end
 
 end
